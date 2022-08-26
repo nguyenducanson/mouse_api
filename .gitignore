@@ -1,1 +1,4 @@
 .idea/
+app/data/train/images
+app/data/val/images
+weights

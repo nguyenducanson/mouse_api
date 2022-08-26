@@ -130,7 +130,7 @@ def parse_args(argv=None):
         random.seed(args.seed)
 
 iou_thresholds = [x / 100 for x in range(50, 100, 5)]
-coco_cats = {} # Call prep_coco_cats to fill this
+coco_cats = {}  # Call prep_coco_cats to fill this
 coco_cats_inv = {}
 color_cache = defaultdict(lambda: {})
 
