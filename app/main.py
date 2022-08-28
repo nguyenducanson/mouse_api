@@ -32,9 +32,9 @@ async def detect(file: UploadFile = File(...)):
             finally:
                 await file.close()
 
-        list_p, detect_time = await run_in_threadpool(mouse.inference, temp.name)  # Pass temp.name to VideoCapture()
-    except Exception:
-        return {"message": "There was an error processing the file"}
+        list_p, detect_time = await run_in_threadpool(mouse.inference, temp.name)
+    except Exception as e:
+        return {"message": str(e)}
     finally:
         os.remove(temp.name)
 
