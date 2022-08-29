@@ -185,7 +185,7 @@ class Mouse_Detection(object):
 
             # calculate duration of the video
             end_time = index / fps - start_time
-            if flag_start==1 and end_time >= 300:
+            if flag_start==1 and end_time >= 5:
                 print("End:", round(end_time,2))
                 break
 
